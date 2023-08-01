@@ -13,3 +13,5 @@ mysql:
 rabbitmq:
     source:  "https://github.com/santhosh-patchigolla/tf-module-rabbitmq.git"
     version: "main" 
+
+    
