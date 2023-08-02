@@ -7,10 +7,14 @@ module "docdb" {
 }
 
 module "redis" {
-  source               = "./vendor/modules/redis"
-  ENV                  = var.ENV
-}
+  source                 = "./vendor/modules/redis"
+  ENV                    = var.ENV
+  REDIS_PORT_NUMBER      = var.REDIS_PORT_NUMBER
+  REDIS_INSTANCE_TYPE    = var.REDIS_INSTANCE_TYPE
+  REDIS_INSTANCE_COUNT   = var.REDIS_INSTANCE_COUNT
+  REDIS_ENGINE_VERSION   = var.REDIS_ENGINE_VERSION
 
+}
 module "mysql" {
   source                 = "./vendor/modules/mysql"
   ENV                    = var.ENV
