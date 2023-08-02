@@ -24,9 +24,12 @@ module "mysql" {
   MYSQL_INSTANCE_TYPE    = var.MYSQL_INSTANCE_TYPE
 }
 
+
 module "rabbitmq" {
-  source               = "./vendor/modules/rabbitmq"
-  ENV                  = var.ENV
+  source                 = "./vendor/modules/rabbitmq"
+  ENV                    = var.ENV
+  RABBITMQ_PORT_NUMBER   = var. RABBITMQ_PORT_NUMBER
+  RABBITMQ_INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
 }
 
 # We are passing the variable in this way..
