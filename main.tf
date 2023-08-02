@@ -13,5 +13,9 @@ module "mysql" {
   ENV                  = var.ENV
 }
 
+module "rabbitmq" {
+  source               = "./vendor/modules/rabbitmq"
+  ENV                  = var.ENV
+}
 
 # We are passing the variable in this way..
