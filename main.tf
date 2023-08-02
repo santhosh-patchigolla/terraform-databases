@@ -1,6 +1,9 @@
 module "docdb" {
-  source                  = "./vendor/modules/docdb"
-  ENV                     = var.ENV
+  source                 = "./vendor/modules/docdb"
+  ENV                    = var.ENV
+  DOCDB_PORT_NUMBER      = var.DOCDB_PORT_NUMBER
+  DOCDB_INSTANCE_TYPE    = var.DOCDB_INSTANCE_TYPE 
+  DOCDB_INSTANCE_COUNT   = var.DOCDB_INSTANCE_COUNT
 }
 
 module "redis" {
