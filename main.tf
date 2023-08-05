@@ -33,3 +33,7 @@ module "rabbitmq" {
 }
 
 # We are passing the variable in this way..
+output "data" {
+  value = module.docdb.data
+}
+
